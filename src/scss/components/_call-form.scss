@@ -1,0 +1,130 @@
+.call-form {
+  padding: 50px 30px;
+  background-image: url('../images/svg/form-background.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+
+  @include min-width($-bp-desktop) {
+    padding: 100px 50px;
+    background-image: url('../images/svg/form-background-desktop.svg');
+    background-repeat: repeat;
+  }
+
+  // .call-form__container
+  &__container {
+    padding: 75px 30px;
+    background-color: $-clr-white;
+    border-radius: 15px;
+
+    @include min-width($-bp-laptop) {
+      padding: 75px 140px;
+    }
+    @include min-width($-bp-desktop) {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1340px;
+      padding: 50px 85px;
+      margin: 0 auto;
+    }
+  }
+
+  // .call-form__heading
+  &__heading {
+    margin: 0 0 8px;
+    line-height: normal;
+    letter-spacing: -0.45px;
+
+    @include min-width($-bp-laptop) {
+      margin: 0 0 10px;
+      font-size: 40px;
+      letter-spacing: normal;
+    }
+    @include min-width($-bp-desktop) {
+      text-align: left;
+    }
+  }
+
+  // .call-form__info
+  &__info {
+    margin: 0 0 25px;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: normal;
+
+    @include min-width($-bp-laptop) {
+      margin: 0 0 36px;
+      font-size: 20px;
+    }
+    @include min-width($-bp-desktop) {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    &--accent {
+      font-weight: 700;
+      color: $-clr-tapestry;
+    }
+  }
+
+  // .call-form__form
+  &__form {
+    @include min-width($-bp-desktop) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  // .call-form__phone-input
+  &__phone-input {
+    display: block;
+    width: 100%;
+    padding: 19px 30px;
+    margin: 0 auto 16px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    color: $-clr-cod-gray;
+    text-align: left;
+    background-color: $-clr-wild-sand;
+    border: 0;
+    border-radius: 10px;
+
+    @include min-width($-bp-laptop) {
+      max-width: 390px;
+      padding: 21px 30px;
+      margin: 0 auto 20px;
+    }
+    @include min-width($-bp-desktop) {
+      min-width: 326px;
+      margin: 0 30px 0 0;
+    }
+  }
+
+  // .call-form__phone-input:focus
+  &__phone-input:focus {
+    outline: none;
+    box-shadow: 0 0 3px 1px $-clr-tapestry;
+  }
+
+  // .call-form__phone-input::placeholder
+  &__phone-input::placeholder {
+    color: $-clr-cod-gray;
+  }
+
+  // .call-form__submit-button
+  &__submit-button {
+    display: block;
+    margin: 0 auto;
+
+    @include min-width($-bp-laptop) {
+      max-width: 390px;
+    }
+  }
+
+  // .call-form__submit-button:focus
+  &__submit-button:focus {
+    outline: none;
+    box-shadow: 0 0 3px 1px $-clr-tapestry;
+  }
+}

@@ -1,0 +1,121 @@
+<section class="rating page__rating">
+  <h3 class="rating_heading visually-hidden">Наш рейтинг</h3>
+  <div class="rating__wrapper">
+    <ul class="rating__list">
+      <li class="rating__item">
+        <div class="rating__grade-block">
+          <div class="rating__stars">
+            <svg
+              class="rating__star-svg"
+              aria-hidden="true"
+              role="presentation"
+              width="24"
+              height="23"
+            >
+              <use xlink:href="./images/svg/sprite/sprite.svg#star"></use>
+            </svg>
+            <span class="rating__grade">4,5 </span
+            ><span class="rating__slash">/ </span
+            ><span class="rating__max-grade">5.0</span>
+          </div>
+          <div class="rating__grade-quantity-block">
+            <span class="rating__grade-quantity">100+ оценок</span>
+          </div>
+        </div>
+        <div class="rating__provider">
+          <%- include('ejs/picture', {
+          <!-- prettier-ignore -->
+          img:{
+                  ext: '.png',
+                  src: './images/png/rating-companies/google',
+                  class: 'rating__provider-logo',
+                  alt: 'Google logo',
+                  webp: true,   
+                  lazy: true,
+                  width: '96',
+                  height: '32',                  
+                  retinaRatios: ['2x', '3x']
+                }
+              }); 
+              %>
+        </div>
+      </li>
+      <li class="rating__item">
+        <div class="rating__grade-block">
+          <div class="rating__stars">
+            <svg
+              class="rating__star-svg"
+              aria-hidden="true"
+              role="presentation"
+              width="24"
+              height="23"
+            >
+              <use xlink:href="./images/svg/sprite/sprite.svg#star"></use>
+            </svg>
+            <span class="rating__grade">4,8 </span>
+            <span class="rating__slash">/ </span>
+            <span class="rating__max-grade">5.0</span>
+          </div>
+          <div class="rating__grade-quantity-block">
+            <span class="rating__grade-quantity">250+ оценок</span>
+          </div>
+        </div>
+        <div class="rating__provider">
+          <%- include('ejs/picture', {
+          <!-- prettier-ignore -->
+          img:{
+                  ext: '.png',
+                  src: './images/png/rating-companies/yandex',
+                  class: 'rating__provider-logo',
+                  alt: 'Yandex logo',
+                  webp: true,   
+                  lazy: true,
+                  width: '79',
+                  height: '30',                  
+                  retinaRatios: ['2x', '3x']
+                }
+              }); 
+              %>
+        </div>
+      </li>
+      <li class="rating__item">
+        <div class="rating__grade-block">
+          <div class="rating__stars">
+            <svg
+              class="rating__star-svg"
+              aria-hidden="true"
+              role="presentation"
+              width="24"
+              height="23"
+            >
+              <use xlink:href="./images/svg/sprite/sprite.svg#star"></use>
+            </svg>
+            <span class="rating__grade">4,3 </span
+            ><span class="rating__slash">/ </span
+            ><span class="rating__max-grade">5.0</span>
+          </div>
+          <div class="rating__grade-quantity-block">
+            <span class="rating__grade-quantity">10 000+ оценок</span>
+          </div>
+        </div>
+        <div class="rating__provider">
+          <%- include('ejs/picture', {
+          <!-- prettier-ignore -->
+          img:{
+                  ext: '.png',
+                  src: './images/png/rating-companies/fixper',
+                  class: 'rating__provider-logo',
+                  alt: 'Fixper logo',
+                  webp: true,   
+                  lazy: true,
+                  width: '70',
+                  height: '22',                  
+                  retinaRatios: ['2x', '3x']
+                }
+              }); 
+              %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

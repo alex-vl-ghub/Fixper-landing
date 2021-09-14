@@ -1,0 +1,53 @@
+// Fonts:
+$-ff-ttnorms: 'TTNorms', arial, helvetica, sans-serif;
+$-ff-montserrat: 'Montserrat', arial, helvetica, sans-serif;
+
+$-ff-base: $-ff-ttnorms;
+$-ff-secondary: $-ff-montserrat;
+
+// Breakpoints
+$-bp-mobile: 420px;
+$-bp-laptop: 780px;
+$-bp-desktop: 1440px;
+$-bp-desktop-lg: 1920px;
+
+// COLOR CONSTANTS:
+// black
+$-clr-mine-shaft: #212121;
+$-clr-cod-gray: #171717;
+$-clr-wood-smoke: #111;
+$-clr-black: #000;
+// gray
+$-clr-gallery: #ececec;
+$-clr-mercury: #e3e3e3;
+$-clr-wild-sand: #f5f5f5;
+$-clr-gray-umber: #2f2f2f;
+// white
+$-clr-alabaster: #fafafa;
+$-clr-white: #fff;
+// red
+// orange
+$-clr-orange-peel: #ff9d00;
+$-clr-bright-yellow-crayola: #ffac28;
+// yellow
+$-clr-koromiko: #ffc464;
+// green
+$-clr-sushi: #78c23e;
+// blue
+$-clr-teal: #008080;
+
+// purple
+$-clr-tapestry: #a95094;
+$-clr-tapestry-transparent: rgba(169, 80, 148, 0);
+$-clr-plum: #96317d;
+$-clr-royal-heath: #993280;
+$-clr-patricia: #994786;
+$-clr-rouge: #a03c7d;
+$-clr-fandango: #b32e91;
+$-clr-flirt: #a5047d;
+
+// COLOR VARS:
+$-clr-base-font-dark: $-clr-wood-smoke;
+$-clr-base-font-light: $-clr-white;
+$-clr-base-font-accent: $-clr-koromiko;
+$-clr-base-brand: $-clr-plum;

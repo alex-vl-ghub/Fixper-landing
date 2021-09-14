@@ -1,0 +1,40 @@
+.page {
+  min-width: 320px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  &__main {
+    flex: 1 1 auto;
+  }
+
+  &__hero {
+    margin-bottom: 75px;
+
+    @include min-width($-bp-laptop) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__advantages {
+    margin-bottom: 54px;
+
+    @include min-width($-bp-laptop) {
+      margin-bottom: 71px;
+    }
+  }
+
+  &__watermark {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+  }
+}

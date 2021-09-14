@@ -1,0 +1,49 @@
+.advantages {
+  padding: 0 30px;
+  @include min-width($-bp-desktop) {
+    padding: 0 136px;
+  }
+
+  // .advantages__list-wrapper
+  &__list-wrapper {
+    @include min-width($-bp-laptop) {
+      max-width: 1170px;
+      margin: 0 auto;
+    }
+  }
+
+  // .advantages__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 -15px;
+    list-style: none;
+
+    @include max-width(410px) {
+      margin: 0 -10px;
+    }
+    @include min-width($-bp-laptop) {
+      margin: 0 -15px;
+    }
+    @include min-width($-bp-desktop) {
+      flex-direction: row;
+    }
+  }
+
+  // .advantages__item
+  &__item {
+    width: calc(100% / 2 - 30px);
+    margin: 0 15px 20px;
+    @include max-width(410px) {
+      width: calc(100% / 2 - 20px);
+      margin: 0 10px 20px;
+    }
+    @include min-width($-bp-laptop) {
+      margin: 0 15px 30px;
+    }
+    @include min-width($-bp-desktop) {
+      width: calc(100% / 4 - 30px);
+    }
+  }
+}

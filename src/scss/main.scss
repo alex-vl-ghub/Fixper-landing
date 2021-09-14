@@ -1,0 +1,45 @@
+// configuration and helpers
+@import 'abstracts/vars';
+@import 'abstracts/mixins';
+
+// vendors
+@import 'vendors/normalize';
+@import 'vendors/vendors';
+
+// base
+@import 'base/base';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/helpers';
+
+// layout
+@import 'layout/page';
+@import 'layout/header';
+@import 'layout/footer';
+
+//components
+@import 'components/logo';
+@import 'components/main-nav';
+@import 'components/button';
+@import 'components/hero';
+@import 'components/advantages';
+@import 'components/advantage';
+@import 'components/diagnostics';
+@import 'components/problems';
+@import 'components/diagnostics-result';
+@import 'components/prices';
+@import 'components/team';
+@import 'components/slider';
+@import 'components/reviews';
+@import 'components/rating';
+@import 'components/faq';
+@import 'components/call-form';
+@import 'components/contacts';
+@import 'components/progress-bar';
+@import 'components/watermark';
+
+// pages
+// @import 'pages/';
+
+// themes
+// @import 'themes/default';

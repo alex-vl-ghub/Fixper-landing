@@ -1,0 +1,20 @@
+import 'core-js/features/dom-collections/for-each';
+import 'core-js/features/promise';
+import svg4everybody from 'svg4everybody';
+import showAllPrices from './components/showAllPrices';
+import diagnosticsResult from './components/diagnosticsResult';
+import scrollToAnchors from './components/scrollToAnchors';
+import setClassToCurrentMainNavLink from './components/setClassToCurrentMainNavLink';
+import toggleCanTouchClass from './components/toggleCanTouchClass';
+import './components/closeGetDiscount';
+import './components/slider';
+import './components/spoiler';
+import './components/watermark';
+import 'simplebar';
+
+showAllPrices();
+diagnosticsResult();
+svg4everybody();
+scrollToAnchors();
+setClassToCurrentMainNavLink('main-nav__link', 'main-nav__link--current');
+toggleCanTouchClass('can-touch');

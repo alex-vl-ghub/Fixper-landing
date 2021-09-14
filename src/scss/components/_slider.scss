@@ -1,0 +1,123 @@
+.slider {
+  // .slider__controls
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .slider__pagination-wrapper
+  &__pagination-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // .slider__preloader
+  &__preloader {
+    top: 30%;
+  }
+
+  // .slider__pagination
+  &__pagination {
+    min-height: 28px;
+    padding-left: 10px;
+    text-align: left;
+  }
+
+  // .slider__pagination
+  &__pagination-bullet {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 20px;
+    cursor: pointer;
+    background-color: $-clr-base-brand;
+    border-radius: 50%;
+  }
+
+  // .slider__pagination-bullet
+  &__pagination-bullet:nth-last-child(1) {
+    opacity: 0.25;
+  }
+
+  // .slider__pagination-bulletpagination-bullet
+  &__pagination-bullet:nth-last-child(2) {
+    opacity: 0.5;
+  }
+
+  // .slider__pagination-bullet
+  &__pagination-bullet:nth-last-child(3) {
+    opacity: 0.75;
+  }
+
+  // .slider__pagination-bullet--active
+  &__pagination-bullet--active {
+    position: relative;
+  }
+
+  // .slider__pagination-bullet--active
+  &__pagination-bullet--active::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    content: '';
+    border: 2px solid $-clr-base-brand;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  // .slider__control-buttons
+  &__control-buttons {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  // .slider__nav-button
+  &__nav-button {
+    padding: 0;
+    margin: 3px 0 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    color: $-clr-base-font-dark;
+    letter-spacing: normal;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+
+    @include min-width($-bp-laptop) {
+      margin: 5px 0 0;
+    }
+  }
+
+  // .slider__next-button
+  &__next-button {
+    position: relative;
+    padding-right: 26px;
+    margin-left: 30px;
+    color: $-clr-base-brand;
+
+    @include min-width($-bp-laptop) {
+      padding-right: 50px;
+      margin-left: 40px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 55%;
+      right: 0;
+      width: 16px;
+      height: 8px;
+      content: '';
+      background-image: url('../images/svg/icons/arrow-right-slider.svg');
+      transform: translateY(-50%);
+
+      @include min-width($-bp-laptop) {
+        width: 36px;
+        background-image: url('../images/svg/icons/arrow-right-long-slider.svg');
+      }
+    }
+  }
+}

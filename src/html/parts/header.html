@@ -1,0 +1,62 @@
+<header class="header page__header">
+  <div class="header__wrapper">
+    <div class="header__top">
+      <include
+        src="parts/logo.html"
+        locals='{
+        "parentClassName": "header__logo header__logo--top header__logo--hide-on-laptop-and-mobile"
+      }'
+      ></include>
+      <div class="header__city">
+        <a class="button button--city" href="#contacts">Москва</a>
+      </div>
+      <nav class="main-nav header__nav" data-simplebar>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#diagnostics">Диагностика</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#prices">Стоимость</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#team">Мастера</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#reviews">Отзывы</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#faq">Вопросы</a>
+          </li>
+        </ul>
+      </nav>
+      <a
+        class="
+          header__call-button header__call-button--top
+          button button--call button--hide-on-laptop-and-mobile
+        "
+        href="tel:+55555555555"
+      >
+        <span class="button__text">Позвонить</span>
+        <span class="button__hover-text">+5 (555) 555 55 55</span>
+      </a>
+    </div>
+    <div class="header__bottom">
+      <include
+        src="parts/logo.html"
+        locals='{
+        "parentClassName": "header__logo header__logo--bottom header__logo--hide-on-desktop"
+      }'
+      ></include>
+      <a
+        class="
+          header__call-button header__call-button--bottom
+          button button--call button--hide-on-desktop
+        "
+        href="tel:+55555555555"
+      >
+        <span class="button__text">Позвонить</span>
+        <span class="button__hover-text">+5 (555) 555 55 55</span></a
+      >
+    </div>
+  </div>
+</header>

@@ -1,0 +1,139 @@
+.header {
+  padding: 25px 30px 10px;
+  background-color: $-clr-tapestry;
+
+  @include min-width($-bp-laptop) {
+    padding: 20px 30px 10px;
+  }
+  @include min-width($-bp-desktop) {
+    padding: 30px 135px 10px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 65px;
+    right: 50%;
+    width: calc(100vw - 60px);
+    min-width: 280px;
+    height: 1px;
+    content: '';
+    background-color: $-clr-patricia;
+    transform: translateX(50%);
+
+    @include min-width($-bp-laptop) {
+      top: 60px;
+      width: 100%;
+    }
+    @include min-width($-bp-desktop) {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  &__top {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    min-height: 40px;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: -30px;
+      width: 21px;
+      height: 100%;
+      content: '';
+      background-image: linear-gradient(
+        to left,
+        $-clr-tapestry,
+        rgba(169, 80, 148, 0)
+      );
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 90px;
+
+    @include min-width($-bp-desktop) {
+      display: none;
+    }
+  }
+
+  &__city {
+    margin-top: 3px;
+    margin-right: 37px;
+    white-space: nowrap;
+
+    @include min-width($-bp-desktop) {
+      order: 3;
+      margin-top: 18px;
+      margin-right: 36px;
+      margin-left: 10px;
+    }
+  }
+
+  &__nav {
+    flex-grow: 1;
+    margin-right: -30px;
+    overflow-x: auto;
+
+    @include min-width($-bp-desktop) {
+      order: 2;
+      margin-top: 16px;
+      margin-right: auto;
+      margin-left: 0;
+    }
+  }
+
+  &__call-button {
+    margin-top: 21px;
+
+    &--top {
+      @include min-width($-bp-desktop) {
+        order: 4;
+        margin: 0;
+      }
+    }
+  }
+
+  &__logo {
+    margin-top: 34px;
+    margin-left: 0;
+    color: $-clr-base-font-light;
+
+    &--top {
+      @include min-width($-bp-desktop) {
+        flex-shrink: 0;
+        order: 1;
+        margin-top: 5px;
+        margin-right: 90px;
+      }
+    }
+
+    &--hide-on-desktop {
+      @include min-width($-bp-desktop) {
+        display: none;
+      }
+    }
+
+    &--hide-on-laptop-and-mobile {
+      @include max-width($-bp-desktop - 1px) {
+        display: none;
+      }
+    }
+  }
+}

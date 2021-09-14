@@ -1,0 +1,376 @@
+.button {
+  display: inline-block;
+  padding: 18px 38px 17px;
+  font-weight: 900;
+  line-height: 1;
+  color: $-clr-base-font-accent;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: $-clr-tapestry;
+  border: solid 2px $-clr-base-font-accent;
+  border-radius: 15px;
+
+  // .button:hover .button__text
+  &:hover &__text {
+    display: none;
+  }
+
+  // .button__hover-text
+  &__hover-text {
+    display: none;
+  }
+
+  // .button:hover .button__hover-text
+  &:hover &__hover-text {
+    display: block;
+  }
+
+  &--city {
+    position: relative;
+    display: block;
+    padding: 0 0 0 30px;
+    font-weight: 500;
+    color: $-clr-base-font-light;
+    background-color: transparent;
+    border: 0;
+    transition: color 0.2s ease-in-out;
+
+    &::before {
+      position: absolute;
+      top: -2px;
+      left: 0;
+      width: 20.1px;
+      height: 20px;
+      content: '';
+      background: no-repeat url('../images/svg/icons/geo.svg');
+    }
+
+    &:hover {
+      color: $-clr-bright-yellow-crayola;
+    }
+  }
+
+  &--call {
+    width: 165px;
+    transition: background-color 0.3s ease-in-out;
+
+    @include max-width(355px) {
+      width: 130px;
+      padding: 15px 20px;
+      font-weight: 500;
+    }
+
+    &:hover {
+      padding: 18px 5px 17px;
+      font-weight: 700;
+      font-stretch: normal;
+      color: $-clr-tapestry;
+      background-color: $-clr-base-font-accent;
+
+      @include max-width(355px) {
+        padding: 17px 5px;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+
+    &:active {
+      box-shadow: 0 0 2px 1px $-clr-base-font-accent;
+    }
+  }
+
+  &--call-request {
+    padding: 20px 50px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $-clr-base-font-light;
+    background-color: $-clr-wood-smoke;
+    border: 0;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $-clr-base-font-accent;
+    }
+  }
+
+  &--get-discount {
+    position: relative;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: $-clr-base-font-accent;
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+    transition: color 0.2s ease-in-out;
+
+    &::after {
+      position: absolute;
+      top: 5px;
+      right: -75px;
+      width: 50px;
+      height: 10px;
+      content: '';
+      background: no-repeat url('../images/svg/icons/arrow-right.svg');
+    }
+
+    &:hover {
+      color: $-clr-bright-yellow-crayola;
+    }
+    &:active {
+      color: $-clr-orange-peel;
+    }
+  }
+
+  &--select-problem {
+    position: relative;
+    padding: 22px 40px 21px 24px;
+    font-size: 18px;
+    font-weight: 500;
+    color: $-clr-base-brand;
+    text-align: left;
+    letter-spacing: -0.36px;
+    background-color: $-clr-white;
+    border: solid 1px $-clr-base-brand;
+    border-radius: 5px;
+
+    @include min-width($-bp-laptop) {
+      padding: 22px 40px 21px;
+      text-align: center;
+    }
+
+    &::after {
+      position: absolute;
+      top: 27px;
+      right: 26px;
+      width: 9px;
+      height: 7px;
+      content: '';
+      background: no-repeat url('../images/svg/icons/arrow-down.svg');
+      transition: all 0.2s ease-out;
+
+      @include min-width($-bp-laptop) {
+        right: 30px;
+      }
+    }
+  }
+
+  &--problem {
+    padding: 17px 80px 16px 39px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: $-clr-base-brand;
+    text-align: left;
+    letter-spacing: normal;
+    background-color: $-clr-white;
+    border: 0;
+    border-radius: 0;
+    transition: color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+
+    @include min-width($-bp-desktop) {
+      padding: 17px 28px 15px 29px;
+      border: 1px solid $-clr-base-brand;
+      border-radius: 15px;
+    }
+
+    &:hover {
+      @include min-width($-bp-desktop) {
+        color: $-clr-base-font-light;
+        background-color: $-clr-base-brand;
+      }
+    }
+    &:active {
+      @include min-width($-bp-desktop) {
+        color: $-clr-base-font-light;
+        background-color: $-clr-fandango;
+      }
+    }
+  }
+
+  // .button--show-all-prices
+  &--show-all-prices {
+    position: relative;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $-clr-base-brand;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $-clr-flirt;
+    }
+  }
+
+  // .button--diagnostics-result-back
+  &--diagnostics-result-back {
+    position: relative;
+    display: block;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: $-clr-tapestry;
+    text-transform: uppercase;
+    letter-spacing: 0.65px;
+    background-color: transparent;
+    border: 0;
+    transition: color 0.2s ease-in-out;
+
+    @include max-width(360px) {
+      font-size: 10px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 52px;
+      height: 8px;
+      content: '';
+      background: no-repeat url('../images/svg/icons/arrow-left.svg');
+    }
+
+    &:hover {
+      color: $-clr-flirt;
+    }
+  }
+
+  // .button--diagnostics-result-call
+  &--diagnostics-result-call {
+    padding: 22px 31px 19px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $-clr-base-font-light;
+    text-align: center;
+    background-color: $-clr-black;
+    border: 0;
+
+    @include min-width($-bp-laptop) {
+      padding: 19px 50px;
+    }
+
+    &:hover {
+      color: $-clr-base-font-accent;
+    }
+    &:active {
+      color: $-clr-bright-yellow-crayola;
+    }
+  }
+
+  // .button--question-details
+  &--question-details {
+    color: $-clr-base-brand;
+    background-color: $-clr-white;
+    border-color: $-clr-base-brand;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $-clr-white;
+      background-color: $-clr-base-brand;
+      border-color: $-clr-base-brand;
+    }
+  }
+
+  // .button--call-form-submit
+  &--call-form-submit {
+    width: 100%;
+    padding: 19px 38px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-stretch: normal;
+    line-height: normal;
+    color: $-clr-base-font-light;
+    letter-spacing: normal;
+    border: 0;
+    transition: color 0.2s ease-in-out;
+
+    @include min-width($-bp-laptop) {
+      padding: 21px 38px;
+    }
+
+    @include min-width($-bp-desktop) {
+      padding: 25px 96px;
+    }
+
+    &:hover {
+      color: $-clr-koromiko;
+    }
+  }
+
+  // .button--contacts-call-button
+  &--contacts-call-button {
+    width: 165px;
+    padding: 18px 38px;
+    color: $-clr-royal-heath;
+    background-color: $-clr-white;
+    border: solid 2px $-clr-royal-heath;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      padding: 18px 5px;
+      font-weight: 700;
+      color: $-clr-base-font-light;
+      background-color: $-clr-royal-heath;
+    }
+    &:active {
+      box-shadow: 0 0 2px 1px $-clr-royal-heath;
+    }
+  }
+
+  &--hide-on-desktop {
+    @include min-width($-bp-desktop) {
+      display: none;
+    }
+  }
+
+  &--hide-on-laptop-and-mobile {
+    @include max-width($-bp-desktop - 1px) {
+      display: none;
+    }
+  }
+
+  // button__svg-icon
+  &__svg-icon {
+    // button__svg-icon--show-all-prices
+    &--show-all-prices {
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      width: 25.3px;
+      height: 24.4px;
+    }
+  }
+}
+
+// prevent sticky hover effects on touch devices
+.can-touch .button--call-request:hover {
+  color: $-clr-base-font-light;
+}
+
+// prevent sticky hover effects on touch devices
+.can-touch .button--diagnostics-result-call:hover {
+  color: $-clr-base-font-light;
+}
+
+// prevent sticky hover effects on touch devices
+.can-touch .button--problem:hover {
+  @include min-width($-bp-desktop) {
+    color: $-clr-base-brand;
+    background-color: $-clr-white;
+  }
+}
+
+// prevent sticky hover effects on touch devices
+.can-touch .button--question-details:hover {
+  color: $-clr-base-brand;
+  background-color: $-clr-white;
+  border-color: $-clr-base-brand;
+}

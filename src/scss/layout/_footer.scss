@@ -1,0 +1,128 @@
+.footer {
+  // .footer__logo
+  &__logo {
+    margin-bottom: 30px;
+    color: $-clr-black;
+    text-align: center;
+  }
+
+  // .footer__nav
+  &__nav {
+    margin-bottom: 50px;
+  }
+
+  // .footer__nav-list
+  &__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0 0 -15px;
+    list-style: none;
+  }
+
+  // .footer__nav-list-item
+  &__nav-list-item {
+    display: flex;
+    margin: 0 20px 15px;
+  }
+
+  // .footer__nav-list-link
+  &__nav-list-link {
+    line-height: 1.25;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $-clr-base-brand;
+    }
+  }
+
+  // .footer__payment-methods
+  &__payment-methods {
+    padding: 35px 55px 18px;
+    background-color: $-clr-alabaster;
+
+    @include min-width($-bp-laptop) {
+      padding: 35px 82px 18px;
+    }
+    @include min-width($-bp-desktop) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  // .footer__payment-methods-heading
+  &__payment-methods-heading {
+    margin: 0 0 15px;
+    line-height: 1.25;
+    text-align: center;
+
+    @include min-width($-bp-desktop) {
+      margin-right: 26px;
+    }
+  }
+
+  // .footer__payment-methods-list-wrapper
+  &__payment-methods-list-wrapper {
+    margin: 0 -7.5px;
+  }
+
+  // .footer__payment-methods-list
+  &__payment-methods-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 400px;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+
+    @include min-width($-bp-laptop) {
+      flex-wrap: nowrap;
+      max-width: 800px;
+    }
+    @include min-width($-bp-desktop) {
+      max-width: 100%;
+    }
+  }
+
+  // .footer__payment-methods-item
+  &__payment-methods-item {
+    display: flex;
+    flex-basis: calc(100% / 3 - 15px);
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    min-width: 92px;
+    min-height: 50px;
+    margin: 0 7.5px 17px;
+    background-color: $-clr-white;
+    border-radius: 10px;
+  }
+
+  // .footer__payment-methods-link
+  &__payment-methods-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  // .footer__payment-methods-image
+  &__payment-methods-image {
+    display: block;
+  }
+
+  // .footer__copyright
+  &__copyright {
+    padding: 35px 0 30px;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
+
+    @include min-width($-bp-desktop) {
+      padding: 50px 0 30px;
+    }
+  }
+}

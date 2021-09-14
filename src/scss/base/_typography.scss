@@ -1,0 +1,50 @@
+.h2 {
+  font-family: $-ff-base;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  line-height: 1;
+  color: $-clr-base-font-dark;
+  text-align: left;
+  letter-spacing: normal;
+  @include min-width($-bp-laptop) {
+    font-size: 67px;
+  }
+}
+
+.h3 {
+  font-family: $-ff-base;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  line-height: 1.33;
+  color: $-clr-base-font-dark;
+  text-align: center;
+  letter-spacing: -0.45px;
+  @include max-width(350px) {
+    font-size: 25px;
+  }
+  @include min-width($-bp-laptop) {
+    font-size: 45px;
+    line-height: 0.89;
+    letter-spacing: normal;
+  }
+  @include min-width($-bp-desktop) {
+    letter-spacing: -0.68px;
+  }
+}
+
+.h4 {
+  font-family: $-ff-base;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  line-height: 1;
+  color: $-clr-tapestry;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.65px;
+}

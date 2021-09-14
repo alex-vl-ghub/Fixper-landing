@@ -1,0 +1,23 @@
+.progress-bar {
+  transform: rotate(-90deg);
+
+  // .progress-bar__background
+  &__background {
+    fill: none;
+    stroke: rgba($-clr-gray-umber, 0.1);
+    stroke-width: 1.5;
+  }
+
+  // .progress-bar__progress
+  &__progress {
+    fill: none;
+    stroke: $-clr-base-font-accent;
+    stroke-dasharray: 100;
+    stroke-dashoffset: -100;
+    stroke-linecap: round;
+    stroke-width: 1.5;
+    transition: stroke-dashoffset 1.5s ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+}

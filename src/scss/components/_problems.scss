@@ -1,0 +1,84 @@
+.problems {
+  // .problems__select-problem-button
+  &__select-problem-button {
+    width: 100%;
+
+    @include min-width($-bp-desktop) {
+      display: none;
+    }
+  }
+
+  &__spoiler--open &__select-problem-button {
+    text-align: center;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  // .problems__list
+  &__list {
+    height: 100%;
+    max-height: 0;
+    padding: 0;
+    margin: 0 0 26px;
+    overflow: hidden;
+    list-style: none;
+    opacity: 0;
+    transition: all 0.7s ease-out;
+    will-change: max-height;
+
+    @include min-width($-bp-laptop) {
+      margin: 0 0 29px;
+    }
+    @include min-width($-bp-desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      max-height: 100%;
+      margin: 0 0 35px;
+      opacity: 1;
+    }
+  }
+
+  &__spoiler--open &__list {
+    opacity: 1;
+  }
+
+  // .problems__item
+  &__item {
+    display: flex;
+    align-items: center;
+    min-height: 54px;
+    overflow: hidden;
+    background-color: $-clr-white;
+    border: solid 1px $-clr-base-brand;
+    border-top: 0;
+    border-radius: 0;
+
+    @include min-width($-bp-desktop) {
+      background-color: transparent;
+      border: 0;
+    }
+
+    &:nth-last-child(1) {
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+
+      @include min-width($-bp-desktop) {
+        border: 0;
+      }
+    }
+  }
+
+  // .problems__problem-button
+  &__problem-button {
+    width: 100%;
+
+    @include min-width($-bp-desktop) {
+      margin-right: 15px;
+      margin-bottom: 20px;
+    }
+  }
+}

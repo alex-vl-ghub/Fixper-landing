@@ -1,0 +1,167 @@
+<footer class="footer page__footer">
+  <include
+    src="parts/logo.html"
+    locals='{
+        "parentClassName": "footer__logo"
+      }'
+  ></include>
+  <div class="footer__nav">
+    <ul class="footer__nav-list">
+      <li class="footer__nav-list-item">
+        <a href="#diagnostics" class="footer__nav-list-link">Диагностика</a>
+      </li>
+      <li class="footer__nav-list-item">
+        <a href="#prices" class="footer__nav-list-link">Стоимость</a>
+      </li>
+      <li class="footer__nav-list-item">
+        <a href="#team" class="footer__nav-list-link">Мастера</a>
+      </li>
+      <li class="footer__nav-list-item">
+        <a href="#reviews" class="footer__nav-list-link">Отзывы</a>
+      </li>
+      <li class="footer__nav-list-item">
+        <a href="#faq" class="footer__nav-list-link">Вопросы</a>
+      </li>
+      <li class="footer__nav-list-item">
+        <a href="#contacts" class="footer__nav-list-link">Карта сайта</a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer__payment-methods">
+    <p class="footer__payment-methods-heading">Способы оплаты:</p>
+    <div class="footer__payment-methods-list-wrapper">
+      <ul class="footer__payment-methods-list">
+        <li class="footer__payment-methods-item">
+          <a
+            href="https://mironline.ru"
+            target="_blank"
+            rel="noopener"
+            class="footer__payment-methods-link"
+          >
+            <%- include('ejs/picture', {
+            <!-- prettier-ignore -->
+            img:{
+                    ext: '.png',
+                    src: './images/png/payment-methods/mir-logo',
+                    class: 'footer__payment-methods-image',
+                    alt: 'Платёжная система Мир',
+                    webp: true,
+                    lazy: true,
+                    width: '42',
+                    height: '12',
+                    retinaRatios: ['2x', '3x']
+                  }
+                });
+                %>
+          </a>
+        </li>
+        <li class="footer__payment-methods-item">
+          <a
+            href="https://www.mastercard.ru"
+            target="_blank"
+            rel="noopener"
+            class="footer__payment-methods-link"
+          >
+            <%- include('ejs/picture', {
+            <!-- prettier-ignore -->
+            img:{
+                    ext: '.png',
+                    src: './images/png/payment-methods/mastercard-logo',
+                    class: 'footer__payment-methods-image',
+                    alt: 'Платёжная система Mastercard',
+                    webp: true,
+                    lazy: true,
+                    width: '25',
+                    height: '16',
+                    retinaRatios: ['2x', '3x']
+                  }
+                });
+                %>
+          </a>
+        </li>
+        <li class="footer__payment-methods-item">
+          <a
+            href="https://www.visa.com.ru"
+            target="_blank"
+            rel="noopener"
+            class="footer__payment-methods-link"
+          >
+            <%- include('ejs/picture', {
+            <!-- prettier-ignore -->
+            img:{
+                    ext: '.png',
+                    src: './images/png/payment-methods/visa-logo',
+                    class: 'footer__payment-methods-image',
+                    alt: 'Платёжная система Visa',
+                    webp: true,
+                    lazy: true,
+                    width: '36',
+                    height: '12',
+                    retinaRatios: ['2x', '3x']
+                  }
+                });
+                %>
+          </a>
+        </li>
+        <li class="footer__payment-methods-item">
+          <a
+            href="https://www.apple.com/ru/apple-pay/"
+            target="_blank"
+            rel="noopener"
+            class="footer__payment-methods-link"
+          >
+            <%- include('ejs/picture', {
+            <!-- prettier-ignore -->
+            img:{
+                    ext: '.png',
+                    src: './images/png/payment-methods/apple-pay-logo',
+                    class: 'footer__payment-methods-image',
+                    alt: 'Платёжная система Apple Pay',
+                    webp: true,
+                    lazy: true,
+                    width: '37',
+                    height: '16',
+                    retinaRatios: ['2x', '3x']
+                  }
+                });
+                %>
+          </a>
+        </li>
+        <li class="footer__payment-methods-item">
+          <a
+            href="https://pay.google.com/intl/ru_ru/about/"
+            target="_blank"
+            rel="noopener"
+            class="footer__payment-methods-link"
+          >
+            <%- include('ejs/picture', {
+            <!-- prettier-ignore -->
+            img:{
+                    ext: '.png',
+                    src: './images/png/payment-methods/google-pay-logo',
+                    class: 'footer__payment-methods-image',
+                    alt: 'Платёжная система Google Pay',
+                    webp: true,
+                    lazy: true,
+                    width: '39',
+                    height: '16',
+                    retinaRatios: ['2x', '3x']
+                  }
+                });
+                %>
+          </a>
+        </li>
+        <li class="footer__payment-methods-item">
+          <a
+            class="footer__payment-methods-link"
+            href="#"
+            target="_blank"
+            rel="noopener"
+            >Наличные</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer__copyright">&copy; 2021 Сервис «Фикспер»</p>
+</footer>

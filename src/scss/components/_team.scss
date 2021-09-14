@@ -1,0 +1,142 @@
+.team {
+  padding: 75px 30px;
+  background-color: $-clr-alabaster;
+
+  @include min-width($-bp-laptop) {
+    padding: 100px 30px;
+  }
+
+  // .team__wrapper
+  &__wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  // .team__heading-secondary
+  &__heading-secondary {
+    margin: 1px 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: $-clr-base-brand;
+    text-transform: none;
+    letter-spacing: normal;
+
+    @include min-width($-bp-laptop) {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+    @include min-width($-bp-desktop) {
+      line-height: 1.1;
+    }
+  }
+
+  // .team__heading-main
+  &__heading-main {
+    margin: 0 0 35px;
+    line-height: 1;
+    letter-spacing: normal;
+
+    @include min-width($-bp-laptop) {
+      margin: 0 0 49px;
+      line-height: 0.89;
+    }
+  }
+
+  // .team__slider
+  &__slider {
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  // .team__slider-list
+  &__slider-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  // .team__slider-item
+  &__slider-item {
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  // .team__slide-image
+  &__slide-image {
+    display: block;
+    width: 100%;
+  }
+
+  // .team__slide-info
+  &__slide-info {
+    padding: 31px 30px 51px;
+    background-color: $-clr-white;
+
+    @include min-width($-bp-laptop) {
+      padding: 51px 30px;
+    }
+    @include min-width($-bp-desktop) {
+      padding: 51px 45px;
+    }
+  }
+
+  // .team__worker-name
+  &__worker-name {
+    margin: 0 0 4px;
+    font-size: 24px;
+    font-weight: 500;
+    color: $-clr-base-font-dark;
+    text-align: left;
+
+    @include min-width($-bp-laptop) {
+      margin: 0 0 8px;
+      line-height: normal;
+    }
+  }
+
+  // .team__worker-profession
+  &__worker-profession {
+    margin: 0 0 25px;
+    line-height: normal;
+    color: var(--clr-plum);
+    text-align: left;
+  }
+
+  // .team__slide-info-list
+  &__slide-info-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  // .team__slide-info-item
+  &__slide-info-item {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 20px;
+    font-family: $-ff-base;
+    line-height: normal;
+    color: $-clr-base-brand;
+    text-align: left;
+
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 12px;
+      height: 10px;
+      content: '';
+      background-image: url('../images/svg/icons/check.svg');
+    }
+  }
+
+  // .team__slider-controls
+  &__slider-controls {
+    margin-top: 35px;
+  }
+}

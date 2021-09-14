@@ -1,0 +1,86 @@
+.main-nav {
+  min-height: 32px;
+
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    padding: 3px 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include min-width($-bp-laptop) {
+        margin-right: 41px;
+      }
+    }
+
+    &:nth-last-child(1) {
+      padding-right: 30px;
+
+      @include min-width($-bp-desktop) {
+        padding-right: 0;
+      }
+    }
+
+    &:first-child {
+      margin-left: auto;
+
+      @include min-width($-bp-desktop) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    line-height: 1;
+    color: $-clr-base-font-light;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $-clr-base-font-accent;
+    }
+
+    &:active {
+      color: $-clr-bright-yellow-crayola;
+    }
+
+    &--current {
+      color: $-clr-base-font-accent;
+      border-bottom: 1px solid $-clr-base-font-accent;
+
+      &:hover {
+        color: $-clr-bright-yellow-crayola;
+        border-bottom: 1px solid $-clr-bright-yellow-crayola;
+      }
+
+      &:active {
+        color: $-clr-orange-peel;
+        border-bottom: 1px solid $-clr-orange-peel;
+      }
+    }
+  }
+}
+
+// prevent sticky hover effects on touch devices
+.can-touch .main-nav__link:hover {
+  color: $-clr-base-font-light;
+}
+
+// prevent sticky hover effects on touch devices
+.can-touch .main-nav__link--current {
+  &:hover {
+    color: $-clr-base-font-accent;
+    border-bottom: 1px solid $-clr-base-font-accent;
+  }
+
+  &:active {
+    color: $-clr-orange-peel;
+    border-bottom: 1px solid $-clr-orange-peel;
+  }
+}

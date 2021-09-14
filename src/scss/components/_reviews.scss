@@ -1,0 +1,141 @@
+.reviews {
+  padding: 75px 30px;
+
+  @include min-width($-bp-laptop) {
+    padding: 100px 30px;
+  }
+
+  // .reviews__wrapper
+  &__wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  // .reviews__heading-main
+  &__heading-main {
+    margin: 0 0 35px;
+    line-height: 1.3;
+    letter-spacing: normal;
+
+    @include min-width($-bp-laptop) {
+      margin: 0 0 50px;
+      font-size: 40px;
+      line-height: 1.3;
+    }
+  }
+
+  // .reviews__slider
+  &__slider {
+    margin-bottom: 35px;
+  }
+
+  // .reviews__slider-list
+  &__slider-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  // .reviews__slider-item
+  &__slider-item {
+    display: flex;
+    height: auto;
+  }
+
+  // .reviews__review-block
+  &__review-block {
+    padding: 30px 30px 35px;
+    background-color: $-clr-alabaster;
+
+    @include min-width($-bp-laptop) {
+      padding: 50px 63px;
+    }
+    @include min-width($-bp-desktop) {
+      padding: 75px 50px;
+    }
+  }
+
+  // .reviews__client
+  &__client {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+
+    @include min-width($-bp-laptop) {
+      margin-bottom: 35px;
+    }
+  }
+
+  // .reviews__avatar
+  &__avatar {
+    display: block;
+    flex-basis: 54px;
+    border-radius: 50%;
+
+    @include min-width($-bp-laptop) {
+      flex-basis: 70px;
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  // .reviews__client-info
+  &__client-info {
+    margin-left: 27px;
+
+    @include min-width($-bp-laptop) {
+      margin-left: 30px;
+    }
+  }
+
+  // .reviews__client-name
+  &__client-name {
+    margin: 0;
+    font-size: 18px;
+    text-align: left;
+
+    @include min-width($-bp-laptop) {
+      margin-top: 4px;
+      font-size: 24px;
+    }
+  }
+
+  // .reviews__review-date
+  &__review-date {
+    margin: 0;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  // reviews__social-icon
+  &__social-icon {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    display: none;
+    width: 27px;
+    height: 27px;
+
+    @include min-width($-bp-desktop) {
+      display: block;
+    }
+  }
+
+  &__review-text {
+    margin: 0 0 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+
+    @include min-width($-bp-laptop) {
+      font-size: 18px;
+      font-style: normal;
+      font-stretch: normal;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

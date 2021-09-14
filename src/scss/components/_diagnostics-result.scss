@@ -1,0 +1,240 @@
+.diagnostics-result {
+  display: none;
+  padding: 0 30px;
+  background-color: $-clr-alabaster;
+
+  @include min-width($-bp-laptop) {
+    padding: 0 83px;
+    background: no-repeat right -260px top url('../images/svg/results-background-laptop.svg'),
+      $-clr-alabaster;
+  }
+  @include min-width($-bp-desktop) {
+    padding: 0;
+    background: $-clr-alabaster;
+  }
+
+  // .diagnostics-result--visible
+  &--visible {
+    display: block;
+  }
+
+  // .diagnostics-result__container
+  &__container {
+    @include min-width($-bp-laptop) {
+      max-width: 970px;
+      margin: 0 auto;
+    }
+    @include min-width($-bp-desktop) {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1440px;
+      padding: 0 0 0 235px;
+      margin: 0 auto;
+    }
+  }
+
+  // .diagnostics-result__content
+  &__content {
+    padding: 75px 0;
+
+    @include min-width($-bp-laptop) {
+      padding: 100px 0 120px;
+    }
+    @include min-width($-bp-desktop) {
+      padding: 115px 0 100px;
+    }
+  }
+
+  // .diagnostics-result__button-back
+  &__button-back {
+    padding-left: 76.65px;
+    margin: 0 auto 5px;
+
+    @include min-width($-bp-laptop) {
+      margin: 0 auto 14px;
+    }
+    @include min-width($-bp-desktop) {
+      margin: 0 0 14px;
+    }
+  }
+
+  // .diagnostics-result__heading
+  &__heading {
+    margin: 0 0 35px;
+
+    @include min-width($-bp-laptop) {
+      margin: 0 0 50px;
+    }
+    @include min-width($-bp-desktop) {
+      text-align: left;
+    }
+  }
+
+  // .diagnostics-result__list-and-button-wrapper
+  .diagnostics-result__list-and-button-wrapper {
+    margin: 0 auto;
+
+    @include min-width(950px) {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+  }
+
+  // .diagnostics-result__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 0;
+    margin: 0 0 15px;
+    list-style: none;
+
+    @include min-width($-bp-laptop) {
+      margin: 0 0 15px;
+    }
+    @include min-width($-bp-desktop) {
+      margin: 0 0 15px;
+    }
+  }
+
+  // .diagnostics-result__list-item
+  &__list-item {
+    display: flex;
+    margin-bottom: 35px;
+
+    @include min-width($-bp-laptop) {
+      align-items: flex-start;
+    }
+  }
+
+  // .diagnostics-result__probability-image
+  &__probability-image {
+    position: relative;
+    flex-basis: 100px;
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+  }
+
+  // .diagnostics-result__text
+  &__text {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    font-size: 26px;
+    font-weight: 700;
+    color: $-clr-gray-umber;
+    letter-spacing: 2px;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  // .diagnostics-result__percent
+  &__percent {
+    font-size: 20px;
+  }
+
+  // .diagnostics-result__item-right
+  &__item-right {
+    flex-grow: 1;
+    padding-top: 6px;
+    padding-left: 25px;
+
+    @include min-width($-bp-laptop) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      padding-top: 20px;
+      padding-left: 30px;
+    }
+  }
+
+  // .diagnostics-result__probable-repair
+  &__probable-repair {
+    margin: 0 0 8px;
+    font-family: $-ff-secondary;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.56;
+    color: $-clr-black;
+    text-align: left;
+
+    @include min-width($-bp-laptop) {
+      flex-basis: 100%;
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+  }
+
+  // .diagnostics-result__price
+  &__price {
+    margin: 0 0 10px;
+    font-family: $-ff-secondary;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 0.91;
+    color: $-clr-black;
+    text-align: left;
+
+    @include min-width($-bp-laptop) {
+      margin: 0;
+      font-size: 24px;
+      line-height: 0.83;
+    }
+  }
+
+  // .diagnostics-result__currency
+  &__currency {
+    padding-left: 4px;
+
+    @include min-width($-bp-laptop) {
+      font-size: 22px;
+      letter-spacing: 3.3px;
+    }
+  }
+
+  // .diagnostics-result__spare-part-price
+  &__spare-part-price {
+    margin: 0;
+    font-family: $-ff-secondary;
+    font-size: 16px;
+    line-height: 1.25;
+    color: $-clr-royal-heath;
+    text-align: left;
+
+    @include min-width($-bp-laptop) {
+      padding-left: 5px;
+      font-style: normal;
+      font-weight: 400;
+      font-stretch: normal;
+      line-height: 1.25;
+      text-align: left;
+      letter-spacing: normal;
+    }
+  }
+
+  // .diagnostics-result__spare-part-price-span
+  &__spare-part-currency {
+    font-size: 14px;
+  }
+
+  // .diagnostics-result__image-container
+  &__image-container {
+    display: none;
+
+    @include min-width($-bp-desktop) {
+      @include background-retina(
+        '../images/png/washing-machine-with-background-desktop@2x.png',
+        '../images/png/washing-machine-with-background-desktop@3x.png'
+      );
+
+      display: block;
+      flex-basis: 50%;
+      min-height: 818px;
+      background-image: url('../images/png/washing-machine-with-background-desktop.png');
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 596px 818px;
+    }
+  }
+}
